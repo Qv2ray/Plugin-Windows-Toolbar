@@ -1,0 +1,59 @@
+/*
+	Copyright (C) 2019 Leroy.H.Y
+	Copyright (C) 2008 Danny Couture
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
+// This file will be processed by the MIDL tool to
+// produce the type library (PerfmonBar.tlb) and marshalling code.
+midl_pragma warning(disable: 2111) // identifier length exceeds 31 characters
+import "oaidl.idl";
+import "ocidl.idl";
+midl_pragma warning(default: 2111)
+
+[
+	object,
+	//{ADA0A5C2-690F-4D11-BDE4-45D054326222}
+	uuid(398148EC-DE70-4F08-97C9-8B9F4EC1BE6E),
+	dual,
+	nonextensible,
+	helpstring("Qv2ray Network Speed Bar Interface"),
+	pointer_default(unique)
+]
+
+interface IQvNetSpeedBar : IDispatch {
+};
+[
+	//{61DF45AB-F973-476A-9A6C-1056B1DDCF98}
+	uuid(899F7D7A-9065-4D5F-BE09-68D9AC6B8BA9),
+	version(1.0),
+	helpstring("Qv2ray Network Speed Bar 1.0 Type Library")
+]
+
+library QvNetSpeedBarLib {
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		//{88C6ABF2-4C63-4B90-98B3-4DCB2615B234}
+		uuid(6788D578-A1CD-4697-A81A-BAE22F035D99),
+		helpstring("Qv2ray Network Speed Bar")
+	]
+	coclass QvNetSpeedBar
+	{
+		[default] interface IQvNetSpeedBar;
+	};
+};

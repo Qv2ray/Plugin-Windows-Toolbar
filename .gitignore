@@ -1,0 +1,14 @@
+/*.opensdf
+/*.sdf
+/*.suo
+/.vs
+x64
+x86
+/bin
+*.user
+*.filters
+*_i.c
+*_i.h
+*_p.c
+src/dlldata.c
+/src/COM+_h.h
